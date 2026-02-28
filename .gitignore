@@ -33,3 +33,7 @@ next-env.d.ts
 
 # raw media assets (source files, not used by site)
 /media-assets/
+
+# large original video files (replaced with compressed mp4)
+/public/media/*.MOV
+/public/media/*.mov

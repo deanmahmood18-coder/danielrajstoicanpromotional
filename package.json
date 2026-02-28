@@ -11,6 +11,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.27",
     "framer-motion": "^12.34.3",

@@ -100,7 +100,7 @@ export default function HighlightReel() {
           <div className="relative aspect-video bg-slate-dark border border-slate-border overflow-hidden group">
             <video
               ref={videoRef}
-              src="/media/DanMotivation.MOV"
+              src="/media/DanMotivation.mp4"
               muted
               playsInline
               loop
