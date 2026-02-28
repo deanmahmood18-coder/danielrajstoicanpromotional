@@ -1,9 +1,7 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
 
-export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 function getResend() {
   const key = process.env.RESEND_API_KEY;
@@ -11,26 +9,6 @@ function getResend() {
   return new Resend(key);
 }
 
-async function appendToCSV(email: string, firstName: string) {
-  try {
-    const csvPath = path.join(process.cwd(), "data", "newsletter-subscribers.csv");
-    const dir = path.dirname(csvPath);
-
-    await fs.mkdir(dir, { recursive: true });
-
-    try {
-      await fs.access(csvPath);
-    } catch {
-      await fs.writeFile(csvPath, "date,email,firstName\n");
-    }
-
-    const date = new Date().toISOString();
-    const row = `${date},${email},"${(firstName || "").replace(/"/g, '""')}"\n`;
-    await fs.appendFile(csvPath, row);
-  } catch (err) {
-    console.error("CSV logging error:", err);
-  }
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -53,9 +31,6 @@ export async function POST(req: NextRequest) {
         audienceId: AUDIENCE_ID,
       });
     }
-
-    // Log to CSV file
-    await appendToCSV(email, firstName);
 
     // Send notification to team about new signup
     await resend.emails.send({
