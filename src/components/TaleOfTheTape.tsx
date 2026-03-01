@@ -122,7 +122,7 @@ export default function TaleOfTheTape() {
                   </p>
                   <div className="flex items-center gap-3 mt-2">
                     <span className="text-white/40 text-[9px] tracking-[0.4em] uppercase font-body">
-                      Middleweight
+                      Super Welterweight
                     </span>
                     <span className="w-1 h-1 rounded-full bg-gold-500/40" />
                     <span className="text-white/40 text-[9px] tracking-[0.4em] uppercase font-body">
@@ -175,7 +175,7 @@ export default function TaleOfTheTape() {
                       fontWeight: 500,
                     }}
                   >
-                    Middleweight
+                    Super Welterweight
                   </p>
                 </div>
               </div>
