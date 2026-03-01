@@ -2,6 +2,8 @@ import ShootingStars from "@/components/ShootingStars";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
+import TaleOfTheTape from "@/components/TaleOfTheTape";
+import InfiniteScroll from "@/components/InfiniteScroll";
 import Accolades from "@/components/Accolades";
 import DanielSunnyHero from "@/components/DanielSunnyHero";
 import HighlightReel from "@/components/HighlightReel";
@@ -18,12 +20,14 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Story />
+      <TaleOfTheTape />
+      <InfiniteScroll />
       <Accolades />
-      <DanielSunnyHero />
       <HighlightReel />
+      <DanielSunnyHero />
       <Management />
-      <PromotersPortal />
       <Newsletter />
+      <PromotersPortal />
       <Contact />
       <Footer />
     </main>

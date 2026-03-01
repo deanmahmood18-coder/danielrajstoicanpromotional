@@ -14,9 +14,8 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/danielrajstoican", icon: "IG" },
-  { label: "Twitter", href: "https://twitter.com/danielrajboxer", icon: "X" },
-  { label: "TikTok", href: "https://www.tiktok.com/@danielrajstoican", icon: "TT" },
+  { label: "Instagram", href: "https://www.instagram.com/daniel_rajstoican?igsh=MWZ4bDZhNHk1d2YwOA%3D%3D&utm_source=qr", icon: "IG" },
+  { label: "TikTok", href: "https://www.tiktok.com/@dstoicanraj?_r=1&_t=ZN-94KvAZjdByh", icon: "TT" },
 ];
 
 export default function Navbar() {

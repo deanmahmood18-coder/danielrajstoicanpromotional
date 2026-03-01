@@ -3,10 +3,8 @@
 import { ArrowRight } from "lucide-react";
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/danielrajstoican" },
-  { label: "Twitter / X", href: "https://twitter.com/danielrajboxer" },
-  { label: "TikTok", href: "https://www.tiktok.com/@danielrajstoican" },
-  { label: "YouTube", href: "https://www.youtube.com/@danielrajstoican" },
+  { label: "Instagram", href: "https://www.instagram.com/daniel_rajstoican?igsh=MWZ4bDZhNHk1d2YwOA%3D%3D&utm_source=qr" },
+  { label: "TikTok", href: "https://www.tiktok.com/@dstoicanraj?_r=1&_t=ZN-94KvAZjdByh" },
 ];
 
 const navItems = ["Story", "Accolades", "Management", "Highlights", "Sponsorship", "Newsletter", "Contact"];
