@@ -9,7 +9,7 @@ const sellingPoints = [
   {
     icon: Target,
     title: "A Story That Sells Itself",
-    body: "Immigration. Poverty. Bullying. Triumph. Daniel-raj's narrative is the kind of origin story that captivates audiences and builds lasting fanbases. This is a fighter people invest in emotionally.",
+    body: "Immigration. Poverty. Bullying. Triumph. Daniel-Raj's narrative is the kind of origin story that captivates audiences and builds lasting fanbases. This is a fighter people invest in emotionally.",
   },
   {
     icon: Globe,
@@ -28,7 +28,7 @@ const sponsorshipFeatures = [
     icon: Megaphone,
     title: "Indirect Social Reach",
     stat: "2M+",
-    body: "Daniel-raj's network spans 2 million followers across connected social media platforms — a powerful, organic audience ready to engage with your brand.",
+    body: "Daniel-Raj's network spans 2 million followers across connected social media platforms — a powerful, organic audience ready to engage with your brand.",
   },
   {
     icon: Users,
@@ -69,7 +69,7 @@ export default function PromotersPortal() {
   return (
     <section className="relative overflow-hidden">
 
-      {/* ─── Why Daniel-raj section (moved above CTA) ─── */}
+      {/* ─── Why Daniel-Raj section (moved above CTA) ─── */}
       <div className="bg-obsidian py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -95,7 +95,7 @@ export default function PromotersPortal() {
               }}
             >
               Why{" "}
-              <span className="text-gold-gradient">Daniel-raj?</span>
+              <span className="text-gold-gradient">Daniel-Raj?</span>
             </h3>
             <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed font-light">
               Three reasons this fighter stands apart from every other prospect
@@ -103,31 +103,60 @@ export default function PromotersPortal() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-20">
-            {sellingPoints.map((point, i) => {
-              const Icon = point.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.12, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="p-7 md:p-8 border border-slate-border hover:border-gold-500/20 bg-slate-dark hover:bg-slate-mid transition-all duration-300 group"
-                >
-                  <div className="w-10 h-10 bg-gold-500/[0.06] border border-gold-500/25 flex items-center justify-center mb-6 group-hover:bg-gold-500/10 transition-colors duration-300">
-                    <Icon size={18} className="text-gold-400/80" />
-                  </div>
-                  <h4
-                    className="text-white text-lg mb-3"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+          {/* Image + selling points — side by side */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mb-20 items-start">
+            {/* Boxing News image — left column */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-4"
+            >
+              <div className="relative overflow-hidden border border-gold-500/15 group">
+                <Image
+                  src="/media/whydaniel-raj.JPG"
+                  alt="Daniel-raj Stoican featured in Boxing News magazine — Nottingham professional boxer and European Champion profiled in national press"
+                  width={400}
+                  height={560}
+                  className="w-full h-auto grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/40 via-transparent to-transparent" />
+              </div>
+              <p className="text-gray-600 text-[9px] tracking-[0.4em] uppercase text-center mt-3 font-body">
+                Boxing News &middot; Feature Article
+              </p>
+            </motion.div>
+
+            {/* Selling points — right column, stacked */}
+            <div className="lg:col-span-8 flex flex-col gap-5">
+              {sellingPoints.map((point, i) => {
+                const Icon = point.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="p-6 md:p-7 border border-slate-border hover:border-gold-500/20 bg-slate-dark hover:bg-slate-mid transition-all duration-300 group flex gap-5 items-start"
                   >
-                    {point.title}
-                  </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed font-light">{point.body}</p>
-                </motion.div>
-              );
-            })}
+                    <div className="w-10 h-10 shrink-0 bg-gold-500/[0.06] border border-gold-500/25 flex items-center justify-center group-hover:bg-gold-500/10 transition-colors duration-300">
+                      <Icon size={18} className="text-gold-400/80" />
+                    </div>
+                    <div>
+                      <h4
+                        className="text-white text-lg mb-2"
+                        style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                      >
+                        {point.title}
+                      </h4>
+                      <p className="text-gray-500 text-sm leading-relaxed font-light">{point.body}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Milestone strip */}
@@ -245,7 +274,7 @@ export default function PromotersPortal() {
             className="text-center"
           >
             <p className="text-gray-400 text-sm mb-6 font-light">
-              Interested in partnering with Daniel-raj? Get in touch to discuss a package tailored to your business.
+              Interested in partnering with Daniel-Raj? Get in touch to discuss a package tailored to your business.
             </p>
             <button
               onClick={() =>
@@ -269,7 +298,7 @@ export default function PromotersPortal() {
       <motion.div
         ref={bannerRef}
         style={{ scale: bannerScale, transformOrigin: "center top" }}
-        className="relative h-[60vh] min-h-[420px] flex items-center overflow-hidden"
+        className="relative h-[50vh] md:h-[60vh] min-h-[380px] md:min-h-[420px] flex items-center overflow-hidden"
       >
         <motion.div
           style={{ y: bannerImageY, scale: bannerImageScale, willChange: "transform" }}
@@ -277,7 +306,7 @@ export default function PromotersPortal() {
         >
           <Image
             src="/media/opportunityisnow.JPG"
-            alt="Daniel-raj Stoican — The Opportunity Is Now"
+            alt="Daniel-Raj Stoican — The Opportunity Is Now"
             fill
             className="object-cover object-center"
             sizes="100vw"

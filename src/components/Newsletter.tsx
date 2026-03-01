@@ -159,10 +159,11 @@ export default function Newsletter() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-2 font-body">
+                  <label htmlFor="newsletter-first-name" className="block text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-2 font-body">
                     First Name
                   </label>
                   <input
+                    id="newsletter-first-name"
                     type="text"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
@@ -171,10 +172,11 @@ export default function Newsletter() {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-2 font-body">
+                  <label htmlFor="newsletter-email" className="block text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-2 font-body">
                     Email *
                   </label>
                   <input
+                    id="newsletter-email"
                     type="email"
                     required
                     value={email}

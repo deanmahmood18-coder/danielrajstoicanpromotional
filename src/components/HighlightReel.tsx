@@ -96,8 +96,8 @@ export default function HighlightReel() {
           transition={{ duration: 0.9, delay: 0.15 }}
           className="relative max-w-5xl mx-auto"
         >
-          {/* Video container */}
-          <div className="relative aspect-video bg-slate-dark border border-slate-border overflow-hidden group">
+          {/* Video container — portrait video */}
+          <div className="relative aspect-[9/16] w-full max-w-[280px] md:max-w-sm mx-auto bg-slate-dark border border-slate-border overflow-hidden group">
             <video
               ref={videoRef}
               src="/media/DanMotivation.mp4"
@@ -120,6 +120,7 @@ export default function HighlightReel() {
             {/* Centre play button */}
             <button
               onClick={togglePlay}
+              aria-label={playing ? "Pause training video" : "Play training video"}
               className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
                 playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"
               }`}
@@ -142,12 +143,14 @@ export default function HighlightReel() {
               <div className="flex items-center gap-3">
                 <button
                   onClick={(e) => { e.stopPropagation(); togglePlay(); }}
+                  aria-label={playing ? "Pause video" : "Play video"}
                   className="text-white/80 hover:text-gold-400 transition-colors"
                 >
                   {playing ? <Pause size={18} /> : <Play size={18} />}
                 </button>
                 <button
                   onClick={(e) => { e.stopPropagation(); toggleMute(); }}
+                  aria-label={muted ? "Unmute video" : "Mute video"}
                   className="text-white/80 hover:text-gold-400 transition-colors"
                 >
                   {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}

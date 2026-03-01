@@ -18,6 +18,7 @@ const chapters = [
     title: "Born Into Struggle",
     body: "Daniel-raj entered the world in Bucharest — a city where marble palaces sit beside crumbling estates. From his earliest years, he knew hardship as a daily reality: nights on the street, weeks without certainty, the weight of poverty pressing down on a child who had done nothing to deserve it.",
     image: "/media/childinromania.JPG",
+    imageAlt: "Young Daniel-raj Stoican as a child growing up in Bucharest, Romania before moving to Nottingham, England",
     imagePosition: "center 20%",
     pull: "A boy born into nothing. Destined for everything.",
   },
@@ -25,8 +26,9 @@ const chapters = [
     year: "2014",
     location: "Sneinton, Nottingham",
     title: "A New Country. The Same Fight.",
-    body: "His family saved everything for a single dream: England. Landing in Sneinton, one of Nottingham's most deprived districts, the streets were different but the struggle felt familiar. No connections. No safety net. Just an unshakeable belief that this country would give him the platform his talent deserved.",
+    body: "His family saved everything for a single dream: England. Landing in Sneinton, one of Nottingham's most deprived districts, the streets were different but the struggle felt familiar. No connections. No safety net. Just an unshakeable belief that this country — and the East Midlands boxing scene — would give him the platform his talent deserved.",
     image: "/media/newcountry.jpg",
+    imageAlt: "Daniel-raj Stoican arriving in Nottingham, England — the Romanian-British boxer who would become the city's first European Champion",
     imagePosition: "center 35%",
     pull: "Different country. Same hunger. Same fire.",
   },
@@ -34,8 +36,9 @@ const chapters = [
     year: "2018",
     location: "The Gym",
     title: "The Day He Found the Ring",
-    body: "At 14, the bullying was relentless — the accent, the name, the outsider. He walked into a boxing gym and found what he'd been searching for his entire life: structure, purpose, and a way to channel every ounce of pain into something powerful. The ring taught him how to survive.",
+    body: "At 14, the bullying was relentless — the accent, the name, the outsider. He walked into Sneinton ABC boxing gym in Nottingham and found what he'd been searching for his entire life: structure, purpose, and a way to channel every ounce of pain into something powerful. The ring taught him how to survive.",
     image: "/media/firststartedboxing.JPG",
+    imageAlt: "Daniel-raj Stoican training at the boxing gym in Nottingham where he first discovered the sport at age 14",
     imagePosition: "center 25%",
     pull: "Pain became power. The ring became home.",
   },
@@ -43,8 +46,9 @@ const chapters = [
     year: "2021",
     location: "First Bout — Age 17",
     title: "The Fighting Begins.",
-    body: "At 17, he stepped between the ropes for the first time competitively. What followed was a meteoric rise — 42 wins from 50 bouts, an England debut finished with a first-round knockout, and a trajectory that marked him as the most exciting prospect Nottingham had produced in a generation.",
+    body: "At 17, he stepped between the ropes for the first time competitively. What followed was a meteoric rise — 42 wins from 50 bouts, an England debut finished with a first-round knockout, and a trajectory that marked him as the most exciting boxing prospect the East Midlands had produced in a generation.",
     image: "/media/firstfight.jpg",
+    imageAlt: "Daniel-raj Stoican competing in his first amateur boxing bout at age 17 — the start of a 42-win career",
     imagePosition: "center 35%",
     pull: "42 wins. One statement. Unstoppable.",
   },
@@ -52,8 +56,9 @@ const chapters = [
     year: "2025",
     location: "European Championship",
     title: "History Forged.",
-    body: "He became the first-ever European Champion from Nottinghamshire. Named Elite Boxer of the Tournament out of 757 boxers in Sweden. A statement to every immigrant, every outsider, every kid from a broken neighbourhood: it is possible.",
+    body: "He became the first-ever European Champion from Nottinghamshire — the East Midlands boxing champion who conquered the continent. Named Elite Boxer of the Tournament out of 757 boxers in Sweden. A statement to every immigrant, every outsider, every kid from a broken neighbourhood: it is possible.",
     image: "/media/IMG_6687.JPG",
+    imageAlt: "Daniel-raj Stoican celebrating his European Championship victory — the first European Boxing Champion from Nottinghamshire",
     imagePosition: "center 20%",
     pull: "The first ever. From Nottinghamshire to the top of Europe.",
   },
@@ -61,8 +66,9 @@ const chapters = [
     year: "Now",
     location: "The Next Chapter",
     title: "The Opportunity Is Now.",
-    body: "European Champion. ABA National Champion. Elite Boxer of the Tournament. The amateur chapter is complete — every box ticked, every record set. Now the professional stage awaits. The boy from Bucharest is ready to become a world champion.",
+    body: "European Champion. ABA National Champion. Elite Boxer of the Tournament. The amateur chapter is complete — every box ticked, every record set. Now, managed by Sunny Edwards and ready for the professional boxing career ahead, the Nottingham professional boxer from Bucharest is prepared to chase a world title.",
     image: "/media/IMG_4460.jpg",
+    imageAlt: "Daniel-raj Stoican preparing for his professional boxing career — Nottingham's European Champion turning pro under Sunny Edwards management",
     imagePosition: "center 30%",
     pull: "The amateur story ends. The professional era begins.",
   },
@@ -218,7 +224,7 @@ function CinematicChapter({
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={chapter.image}
-            alt={chapter.title}
+            alt={chapter.imageAlt}
             fill
             className="object-cover"
             style={{ objectPosition: chapter.imagePosition }}
@@ -315,7 +321,7 @@ function CinematicChapter({
         >
           <Image
             src={chapter.image}
-            alt={chapter.title}
+            alt={chapter.imageAlt}
             fill
             className="object-cover"
             style={{ objectPosition: chapter.imagePosition }}

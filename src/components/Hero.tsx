@@ -57,10 +57,11 @@ export default function Hero() {
         >
           <Image
             src="/media/landing_photo.JPG"
-            alt="Daniel-raj Stoican — Professional Boxer"
+            alt="Daniel-raj Stoican, Nottingham professional boxer, European Champion and ABA National Champion managed by Sunny Edwards"
             fill
             priority
-            className="object-cover object-top"
+            className="object-cover"
+            style={{ objectPosition: isMobile ? "35% 15%" : "center top" }}
             sizes="100vw"
             quality={90}
           />
@@ -76,7 +77,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute top-24 right-8 md:right-16 z-10 text-right hidden sm:block"
+        className="absolute top-20 right-5 md:top-24 md:right-16 z-10 text-right"
       >
         <div className="border-r border-gold-500/30 pr-5">
           <p className="text-gold-500/50 text-[9px] tracking-[0.5em] uppercase mb-1.5 font-body">
@@ -96,7 +97,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute top-24 left-6 md:left-12 z-10 hidden sm:flex items-center gap-4"
+        className="absolute top-20 left-5 md:top-24 md:left-12 z-10 flex items-center gap-3 md:gap-4"
       >
         <div className="w-px h-16 bg-gradient-to-b from-gold-500/40 to-transparent" />
         <div>
@@ -104,10 +105,10 @@ export default function Hero() {
             Amateur Record
           </p>
           <p
-            className="text-white text-3xl mt-1"
+            className="text-white text-2xl md:text-3xl mt-1"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
           >
-            42 <span className="text-gold-500/40 text-2xl">—</span> 8
+            42 <span className="text-gold-500/40 text-xl md:text-2xl">—</span> 8
           </p>
         </div>
       </motion.div>

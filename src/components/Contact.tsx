@@ -263,10 +263,11 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                    <label htmlFor="contact-name" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                       Full Name *
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       name="name"
                       required
@@ -277,10 +278,11 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                    <label htmlFor="contact-organization" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                       Organisation *
                     </label>
                     <input
+                      id="contact-organization"
                       type="text"
                       name="organization"
                       required
@@ -293,10 +295,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                  <label htmlFor="contact-role" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                     I am a... *
                   </label>
                   <select
+                    id="contact-role"
                     name="role"
                     required
                     value={form.role}
@@ -316,10 +319,11 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                    <label htmlFor="contact-email" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                       Email *
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       required
@@ -330,10 +334,11 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                    <label htmlFor="contact-phone" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                       Phone
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       name="phone"
                       value={form.phone}
@@ -345,10 +350,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
+                  <label htmlFor="contact-message" className="block text-gray-400 text-xs tracking-widest uppercase mb-2">
                     Your Message *
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     required
                     rows={5}

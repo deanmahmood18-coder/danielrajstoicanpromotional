@@ -70,7 +70,7 @@ export default function TaleOfTheTape() {
         {/* Main layout: image left, stats right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center">
           {/* Fighter image with broadcast frame */}
-          <motion.div
+          <motion.figure
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -87,7 +87,7 @@ export default function TaleOfTheTape() {
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/media/picture6.JPG"
-                  alt="Daniel-raj Stoican — Fighter Profile"
+                  alt="Daniel-raj Stoican in competition stance ringside, Nottingham professional boxer and European Champion in the super welterweight division"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -100,7 +100,7 @@ export default function TaleOfTheTape() {
               </div>
 
               {/* Name plate at bottom of image — broadcast lower-third style */}
-              <div className="absolute bottom-0 left-0 right-0 z-10 p-5">
+              <figcaption className="absolute bottom-0 left-0 right-0 z-10 p-5">
                 <div className="border-l-2 border-gold-500 pl-4">
                   <p
                     className="text-white text-2xl md:text-3xl leading-none"
@@ -130,9 +130,9 @@ export default function TaleOfTheTape() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </figcaption>
             </div>
-          </motion.div>
+          </motion.figure>
 
           {/* Stats panel — broadcast graphic right side */}
           <motion.div
@@ -182,8 +182,8 @@ export default function TaleOfTheTape() {
 
               <div className="w-full h-px bg-slate-border/50 mb-8" />
 
-              {/* Individual stat rows */}
-              <div className="space-y-6">
+              {/* Individual stat rows — semantic description list */}
+              <dl className="space-y-6">
                 {stats.map((stat, i) => (
                   <motion.div
                     key={stat.label}
@@ -192,10 +192,10 @@ export default function TaleOfTheTape() {
                     transition={{ duration: 0.5, delay: 0.6 + i * 0.12 }}
                   >
                     <div className="flex items-baseline justify-between mb-2">
-                      <span className="text-white/30 text-[10px] tracking-[0.4em] uppercase font-body">
+                      <dt className="text-white/30 text-[10px] tracking-[0.4em] uppercase font-body">
                         {stat.label}
-                      </span>
-                      <div className="flex items-baseline gap-1.5">
+                      </dt>
+                      <dd className="flex items-baseline gap-1.5">
                         <span
                           className="text-white text-2xl md:text-3xl"
                           style={{
@@ -211,7 +211,7 @@ export default function TaleOfTheTape() {
                             {stat.unit}
                           </span>
                         )}
-                      </div>
+                      </dd>
                     </div>
 
                     {/* Animated stat bar */}
@@ -264,15 +264,15 @@ export default function TaleOfTheTape() {
                     )}
                   </motion.div>
                 ))}
-              </div>
+              </dl>
 
               {/* Bottom ticker-style info */}
-              <div className="mt-8 pt-5 border-t border-slate-border/30">
+              <dl className="mt-8 pt-5 border-t border-slate-border/30">
                 <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                   {[
                     { label: "Nationality", val: "Romanian-British" },
                     { label: "Age", val: "21" },
-                    { label: "Gym", val: "Sneinton ABC" },
+                    { label: "Gym", val: "Sneinton ABC, Nottingham" },
                   ].map((item, i) => (
                     <motion.div
                       key={item.label}
@@ -281,19 +281,19 @@ export default function TaleOfTheTape() {
                       transition={{ duration: 0.4, delay: 1.3 + i * 0.1 }}
                       className="flex items-center gap-2"
                     >
-                      <span className="text-white/20 text-[9px] tracking-[0.3em] uppercase font-body">
+                      <dt className="text-white/20 text-[9px] tracking-[0.3em] uppercase font-body">
                         {item.label}
-                      </span>
-                      <span className="text-white/50 text-xs font-body">
+                      </dt>
+                      <dd className="text-white/50 text-xs font-body">
                         {item.val}
-                      </span>
+                      </dd>
                       {i < 2 && (
                         <span className="text-slate-border ml-3">|</span>
                       )}
                     </motion.div>
                   ))}
                 </div>
-              </div>
+              </dl>
             </div>
           </motion.div>
         </div>

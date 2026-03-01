@@ -43,7 +43,7 @@ export default function DanielSunnyHero() {
       >
         <Image
           src="/media/danielandsunny.jpg"
-          alt="Daniel-raj Stoican with manager Sunny Edwards"
+          alt="Daniel-raj Stoican with his manager Sunny Edwards, former IBF World Flyweight Champion — Sunny Edwards management athlete from Nottingham"
           fill
           className="object-cover object-[center_30%]"
           sizes="100vw"

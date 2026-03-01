@@ -251,13 +251,27 @@ export default function Accolades() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(201,168,76,0.06)_0%,transparent_60%)]" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          {/* Section label */}
-          <div ref={titleRef} className="mb-20 md:mb-28">
+          {/* Section label with background image */}
+          <div ref={titleRef} className="mb-20 md:mb-28 relative overflow-hidden">
+            {/* Background image */}
+            <div className="absolute -top-16 right-0 md:-right-4 w-[200px] md:w-[400px] h-[280px] md:h-[480px] opacity-[0.07] pointer-events-none select-none">
+              <Image
+                src="/media/picture6.JPG"
+                alt=""
+                role="presentation"
+                fill
+                className="object-cover object-top"
+                sizes="400px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-slate-dark/50 to-slate-dark" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-dark via-transparent to-slate-dark/80" />
+            </div>
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={titleInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7 }}
-              className="flex items-center gap-4 mb-5"
+              className="flex items-center gap-4 mb-5 relative z-10"
             >
               <div className="section-divider" />
               <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
@@ -274,7 +288,7 @@ export default function Accolades() {
                 fontWeight: 600,
                 fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
               }}
-              className="text-white leading-[0.95]"
+              className="text-white leading-[0.95] relative z-10"
             >
               The Record
             </motion.h2>
@@ -296,7 +310,7 @@ export default function Accolades() {
                 >
                   <Image
                     src="/media/european_champ.JPG"
-                    alt="Daniel-raj Stoican — European Champion"
+                    alt="Daniel-raj Stoican celebrating his European Championship victory in Sweden — the first European Boxing Champion from Nottinghamshire"
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -398,6 +412,54 @@ export default function Accolades() {
             ))}
           </div>
 
+          {/* ABA National Championship — Featured Fight */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-20 md:mt-28"
+          >
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="w-8 h-px bg-gold-500/40" />
+              <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
+                Featured Fight
+              </span>
+              <div className="w-8 h-px bg-gold-500/40" />
+            </div>
+            <h3
+              className="text-white text-center mb-3"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+              }}
+            >
+              ABA National Championship{" "}
+              <span className="text-gold-gradient">Victory</span>
+            </h3>
+            <p className="text-gray-500 text-sm text-center max-w-lg mx-auto leading-relaxed font-light mb-10">
+              The first Nottingham boxer to claim the ABA national title since Carl Froch.
+              Watch the moment history was made.
+            </p>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative aspect-video bg-slate-dark border border-slate-border overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/ZCu83qrg218"
+                  title="Daniel-Raj Stoican — ABA National Championship"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              {/* Corner accents */}
+              <div className="absolute top-0 left-0 w-16 h-px bg-gradient-to-r from-gold-500/40 to-transparent pointer-events-none" />
+              <div className="absolute top-0 left-0 h-16 w-px bg-gradient-to-b from-gold-500/40 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-16 h-px bg-gradient-to-l from-gold-500/40 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 right-0 h-16 w-px bg-gradient-to-t from-gold-500/40 to-transparent pointer-events-none" />
+            </div>
+          </motion.div>
+
           {/* Photo strip — horizontal parallax */}
           <motion.div
             ref={stripRef}
@@ -407,18 +469,23 @@ export default function Accolades() {
             viewport={{ once: true }}
             className="mt-20 grid grid-cols-3 gap-2 md:gap-3"
           >
-            {["/media/IMG_6686.JPG", "/media/IMG_5231.JPG", "/media/IMG_8010.jpg"].map(
-              (src, i) => (
+            {[
+              { src: "/media/IMG_6686.JPG", position: "center 20%", alt: "Daniel-raj Stoican competing in elite amateur boxing — Nottingham's European Champion in action" },
+              { src: "/media/IMG_5231.JPG", position: "center 30%", alt: "Daniel-raj Stoican victorious after winning a championship bout — East Midlands boxing champion" },
+              { src: "/media/IMG_8010.jpg", position: "center 35%", alt: "Daniel-raj Stoican ringside during competition — ABA National Champion from Nottinghamshire" },
+            ].map(
+              (img, i) => (
                 <motion.div
                   key={i}
                   style={stripXValues[i] ? { x: stripXValues[i], willChange: "transform" } : {}}
                   className="relative aspect-square overflow-hidden group"
                 >
                   <Image
-                    src={src}
-                    alt={`Daniel-raj Stoican — Achievement ${i + 1}`}
+                    src={img.src}
+                    alt={img.alt}
                     fill
-                    className="object-cover object-center grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700"
+                    className="object-cover grayscale group-hover:grayscale-0 scale-105 group-hover:scale-100 transition-all duration-700"
+                    style={{ objectPosition: img.position }}
                     sizes="(max-width: 768px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-obsidian/30 group-hover:bg-obsidian/5 transition-colors duration-500" />
