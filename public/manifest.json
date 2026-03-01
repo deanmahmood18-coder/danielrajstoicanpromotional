@@ -1,0 +1,21 @@
+{
+  "name": "Daniel-raj Stoican — Professional Boxer",
+  "short_name": "DSR Boxing",
+  "description": "Official site of Daniel-raj Stoican — European Champion, ABA National Champion. Managed by Sunny Edwards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
