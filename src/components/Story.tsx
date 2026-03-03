@@ -544,6 +544,69 @@ export default function Story() {
         />
       ))}
 
+      {/* ─── In His Own Words — Video ─── */}
+      <div className="py-28 md:py-40 relative">
+        {/* Subtle top divider */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/10 to-transparent" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-80px" }}
+          className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16"
+        >
+          {/* Section label */}
+          <div className="text-center mb-12 md:mb-16">
+            <div className="flex items-center justify-center gap-4 mb-5">
+              <div className="w-8 h-px bg-gold-500/40" />
+              <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+                In His Own Words
+              </span>
+              <div className="w-8 h-px bg-gold-500/40" />
+            </div>
+            <h3
+              className="text-white leading-[1.05] mb-4"
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontWeight: 600,
+                fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
+              }}
+            >
+              The Story Behind{" "}
+              <span className="text-gold-gradient">the Fighter</span>
+            </h3>
+            <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed font-light">
+              No script. No filter. Daniel-raj on the upbringing that forged him.
+            </p>
+          </div>
+
+          {/* Video embed */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            viewport={{ once: true, margin: "-60px" }}
+            className="relative rounded-sm overflow-hidden border border-white/[0.04] shadow-[0_0_80px_rgba(0,0,0,0.6)]"
+          >
+            {/* 16:9 aspect ratio container */}
+            <div className="relative w-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/2ZrYQ_luZ-4?rel=0&modestbranding=1&color=white"
+                title="Daniel-raj Stoican — In His Own Words"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                frameBorder={0}
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+
+            {/* Subtle gold glow beneath */}
+            <div className="absolute -bottom-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+          </motion.div>
+        </motion.div>
+      </div>
+
       {/* ─── Closing quote ─── */}
       <div className="py-28 md:py-40">
         <motion.div
