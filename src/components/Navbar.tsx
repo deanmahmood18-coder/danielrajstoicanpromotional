@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Story", href: "#story" },
@@ -55,20 +56,16 @@ export default function Navbar() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-3 group"
             >
-              <div className="w-9 h-9 border border-gold-500/30 group-hover:border-gold-500/60 flex items-center justify-center transition-all duration-300">
-                <span
-                  className="text-gold-500/80 group-hover:text-gold-400 text-[9px] leading-none tracking-[0.15em] transition-colors duration-300"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                >
-                  DSR
-                </span>
-              </div>
+              <Image
+                src="/media/logo.png"
+                alt="Daniel Stoican logo"
+                width={36}
+                height={36}
+                className="w-9 h-9 object-contain group-hover:opacity-80 transition-opacity duration-300"
+              />
               <div className="hidden sm:flex flex-col">
-                <span
-                  className="text-white text-[13px] tracking-[0.1em] group-hover:text-gold-400 transition-colors duration-300 leading-tight"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
-                >
-                  Daniel-Raj Stoican
+                <span className="font-display text-white text-[13px] tracking-[0.1em] group-hover:text-gold-400 transition-colors duration-300 leading-tight">
+                  Daniel Stoican
                 </span>
                 <span className="text-gray-600 text-[8px] tracking-[0.35em] uppercase font-body leading-tight mt-0.5">
                   Professional Boxer
@@ -82,7 +79,7 @@ export default function Navbar() {
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link.href)}
-                  className="relative text-[10px] font-medium tracking-[0.22em] uppercase text-gray-500 hover:text-white transition-colors duration-300 group font-body py-1"
+                  className="relative font-heading text-[11px] tracking-[0.18em] uppercase text-gray-500 hover:text-white transition-colors duration-300 group py-1"
                 >
                   {link.label}
                   <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gold-500/50 transition-all duration-300 group-hover:w-full" />
@@ -110,7 +107,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => handleNavClick("#contact")}
-                className="ml-2 px-5 py-2 border border-gold-500/30 text-gold-500/80 text-[10px] font-medium tracking-[0.22em] uppercase hover:bg-gold-500 hover:text-obsidian hover:border-gold-500 transition-all duration-300 font-body"
+                className="ml-2 px-5 py-2 border border-gold-500/30 text-gold-500/80 font-heading text-[11px] tracking-[0.18em] uppercase hover:bg-gold-500 hover:text-obsidian hover:border-gold-500 transition-all duration-300"
               >
                 Inquire
               </button>
@@ -141,14 +138,13 @@ export default function Navbar() {
             {/* Mobile header */}
             <div className="flex items-center justify-between px-6 h-16">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 border border-gold-500/30 flex items-center justify-center">
-                  <span
-                    className="text-gold-500/80 text-[9px] leading-none tracking-[0.15em]"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                  >
-                    DSR
-                  </span>
-                </div>
+                <Image
+                  src="/media/logo.png"
+                  alt="Daniel Stoican logo"
+                  width={36}
+                  height={36}
+                  className="w-9 h-9 object-contain"
+                />
               </div>
               <button
                 onClick={() => setMenuOpen(false)}
@@ -167,8 +163,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-white hover:text-gold-400 transition-colors text-3xl"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500 }}
+                  className="font-heading text-white hover:text-gold-400 transition-colors text-4xl tracking-[0.12em] uppercase"
                 >
                   {link.label}
                 </motion.button>
@@ -179,7 +174,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
                 onClick={() => handleNavClick("#contact")}
-                className="mt-4 px-8 py-3 bg-gold-500 text-obsidian font-medium text-xs tracking-[0.2em] uppercase hover:bg-gold-400 transition-colors"
+                className="mt-4 px-8 py-3 bg-gold-500 text-obsidian font-heading text-sm tracking-[0.15em] uppercase hover:bg-gold-400 transition-colors"
               >
                 Inquire
               </motion.button>

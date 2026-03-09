@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
 
     // Send notification to team about new signup
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Daniel-raj Stoican <newsletter@danielrajstoican.com>",
+      from: process.env.RESEND_FROM_EMAIL || "Daniel Stoican <newsletter@danielrajstoican.com>",
       to: "deanmahmood18@icloud.com",
       subject: `New Newsletter Signup — ${firstName || "Anonymous"} (${email})`,
       html: `
@@ -70,9 +70,9 @@ export async function POST(req: NextRequest) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://danielrajstoican.com";
 
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Daniel-raj Stoican <newsletter@danielrajstoican.com>",
+      from: process.env.RESEND_FROM_EMAIL || "Daniel Stoican <newsletter@danielrajstoican.com>",
       to: email,
-      subject: "Welcome to the Inner Circle — Daniel-raj Stoican",
+      subject: "Welcome to the Inner Circle — Daniel Stoican",
       html: generateWelcomeEmail(firstName, siteUrl),
     });
 
@@ -142,7 +142,7 @@ function generateWelcomeEmail(firstName: string, siteUrl: string): string {
             <td style="padding: 0 24px 32px 24px;">
               <img
                 src="${siteUrl}/media/european_champ.JPG"
-                alt="Daniel-raj Stoican — European Champion"
+                alt="Daniel Stoican — European Champion"
                 width="552"
                 style="width: 100%; max-width: 552px; height: auto; display: block; border: 1px solid rgba(201,168,76,0.1);"
               />
@@ -237,7 +237,7 @@ function generateWelcomeEmail(firstName: string, siteUrl: string): string {
             <td style="padding: 0 24px 32px 24px;">
               <img
                 src="${siteUrl}/media/IMG_7038.jpg"
-                alt="Daniel-raj Stoican — Training"
+                alt="Daniel Stoican — Training"
                 width="552"
                 style="width: 100%; max-width: 552px; height: auto; display: block; border: 1px solid rgba(201,168,76,0.1);"
               />
@@ -253,7 +253,7 @@ function generateWelcomeEmail(firstName: string, siteUrl: string): string {
                 </h2>
                 <p style="color: #9ca3af; font-size: 14px; line-height: 1.8; margin: 0;">
                   As a member of the Inner Circle, you&rsquo;ll be the first to know about every milestone
-                  on Daniel-raj&rsquo;s journey to the professional stage and beyond.
+                  on Daniel&rsquo;s journey to the professional stage and beyond.
                 </p>
               </div>
 
@@ -261,7 +261,7 @@ function generateWelcomeEmail(firstName: string, siteUrl: string): string {
                 ${[
                   ["Fight announcements", "and ticket pre-sale access before the general public"],
                   ["Training camp updates", "— behind-the-scenes footage, sparring reports, and preparation insights"],
-                  ["Personal messages", "directly from Daniel-raj — his thoughts, his mindset, his goals"],
+                  ["Personal messages", "directly from Daniel — his thoughts, his mindset, his goals"],
                   ["Career milestones", "as they happen — pro debut, rankings, title shots, and everything in between"],
                 ].map(([bold, rest], i, arr) => `
                 <tr>
@@ -284,7 +284,7 @@ function generateWelcomeEmail(firstName: string, siteUrl: string): string {
           <tr>
             <td style="padding: 0 40px 40px 40px; text-align: center;">
               <p style="color: #9ca3af; font-size: 14px; line-height: 1.7; margin: 0 0 20px 0;">
-                Follow Daniel-raj on social media to stay connected between newsletters.
+                Follow Daniel on social media to stay connected between newsletters.
               </p>
               <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                 <tr>

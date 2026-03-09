@@ -1,7 +1,7 @@
 {
   "name": "danielrajstoican.com",
   "version": "1.0.0",
-  "description": "Professional portfolio website for Daniel-raj Stoican",
+  "description": "Professional portfolio website for Daniel Stoican",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

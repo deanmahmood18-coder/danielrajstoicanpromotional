@@ -87,7 +87,7 @@ export default function TaleOfTheTape() {
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/media/picture6.JPG"
-                  alt="Daniel-raj Stoican in competition stance ringside, Nottingham professional boxer and European Champion in the super welterweight division"
+                  alt="Daniel Stoican in competition stance ringside, Nottingham professional boxer and European Champion in the super welterweight division"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -109,7 +109,7 @@ export default function TaleOfTheTape() {
                       fontWeight: 600,
                     }}
                   >
-                    Daniel-Raj
+                    Daniel
                   </p>
                   <p
                     className="text-gold-500 text-2xl md:text-3xl leading-none mt-0.5"

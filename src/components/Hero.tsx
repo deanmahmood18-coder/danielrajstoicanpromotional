@@ -57,7 +57,7 @@ export default function Hero() {
         >
           <Image
             src="/media/landing_photo.JPG"
-            alt="Daniel-raj Stoican, Nottingham professional boxer, European Champion and ABA National Champion managed by Sunny Edwards"
+            alt="Daniel Stoican, Nottingham professional boxer, European Champion and ABA National Champion managed by Sunny Edwards"
             fill
             priority
             className="object-cover"
@@ -83,10 +83,7 @@ export default function Hero() {
           <p className="text-gold-500/50 text-[9px] tracking-[0.5em] uppercase mb-1.5 font-body">
             Managed By
           </p>
-          <p
-            className="text-white/90 text-sm tracking-[0.18em]"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500 }}
-          >
+          <p className="font-heading text-white/90 text-base tracking-[0.12em]">
             Sunny Edwards
           </p>
         </div>
@@ -104,11 +101,8 @@ export default function Hero() {
           <p className="text-gray-500 text-[9px] tracking-[0.5em] uppercase font-body">
             Amateur Record
           </p>
-          <p
-            className="text-white text-2xl md:text-3xl mt-1"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
-          >
-            42 <span className="text-gold-500/40 text-xl md:text-2xl">—</span> 8
+          <p className="font-heading text-white text-3xl md:text-4xl mt-1 tracking-wider">
+            42 <span className="text-gold-500/40 text-2xl md:text-3xl">—</span> 8
           </p>
         </div>
       </motion.div>
@@ -128,7 +122,7 @@ export default function Hero() {
               className="flex items-center gap-5 mb-5"
             >
               <div className="w-12 h-px bg-gradient-to-r from-gold-500/60 to-transparent" />
-              <span className="text-gold-500/80 text-[10px] font-medium tracking-[0.5em] uppercase font-body">
+              <span className="font-heading text-gold-500/80 text-sm tracking-[0.3em] uppercase">
                 European Champion 2025
               </span>
             </motion.div>
@@ -140,16 +134,10 @@ export default function Hero() {
               transition={{ duration: 1.1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="leading-[0.88] mb-5"
             >
-              <span
-                className="block text-[clamp(3rem,9vw,8rem)] text-white"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, letterSpacing: "-0.025em" }}
-              >
-                Daniel-Raj
+              <span className="block font-display text-[clamp(3rem,9vw,8rem)] text-white" style={{ letterSpacing: "-0.025em" }}>
+                Daniel
               </span>
-              <span
-                className="block text-[clamp(3rem,9vw,8rem)] text-gold-gradient"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, letterSpacing: "-0.025em" }}
-              >
+              <span className="block font-display text-[clamp(3rem,9vw,8rem)] text-gold-gradient" style={{ letterSpacing: "-0.025em" }}>
                 Stoican
               </span>
             </motion.h1>
@@ -187,14 +175,14 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection("#story")}
-                className="group flex items-center gap-3 px-7 py-3.5 bg-gold-500 hover:bg-gold-400 text-obsidian font-semibold text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:shadow-[0_0_50px_rgba(201,168,76,0.35)]"
+                className="group flex items-center gap-3 px-7 py-3.5 bg-gold-500 hover:bg-gold-400 text-obsidian font-heading text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_50px_rgba(201,168,76,0.35)]"
               >
                 Discover the Journey
               </button>
 
               <button
                 onClick={() => scrollToSection("#accolades")}
-                className="group flex items-center gap-3 px-7 py-3.5 border border-white/15 text-gray-300 hover:border-gold-500/40 hover:text-gold-400 font-medium text-[11px] tracking-[0.25em] uppercase transition-all duration-300"
+                className="group flex items-center gap-3 px-7 py-3.5 border border-white/15 text-gray-300 hover:border-gold-500/40 hover:text-gold-400 font-heading text-sm tracking-[0.15em] uppercase transition-all duration-300"
               >
                 View Record
                 <span className="inline-block group-hover:translate-x-1.5 transition-transform duration-300">

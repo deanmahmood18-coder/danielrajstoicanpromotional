@@ -87,7 +87,7 @@ export default function Contact() {
             className="flex items-center justify-center gap-4 mb-4"
           >
             <div className="section-divider" />
-            <span className="text-gold-500 text-xs tracking-[0.4em] uppercase font-medium">
+            <span className="text-gold-500 font-heading text-sm tracking-[0.25em] uppercase">
               Inquiries
             </span>
             <div className="w-16 h-px bg-gradient-to-l from-gold-500 to-transparent" />
@@ -97,23 +97,10 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={titleInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
-            }}
-            className="text-white leading-none mb-4"
+            className="text-white font-heading text-[clamp(2.5rem,7vw,5.5rem)] tracking-[0.04em] uppercase leading-none mb-4"
           >
             Start the{" "}
-            <span
-              style={{
-                background:
-                  "linear-gradient(135deg, #E2C878 0%, #C9A84C 60%, #A68B3A 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span className="text-gold-gradient">
               Conversation
             </span>
           </motion.h2>
@@ -140,8 +127,7 @@ export default function Contact() {
           >
             <div>
               <h3
-                className="text-white text-2xl mb-2"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                className="text-white font-heading text-2xl tracking-wide mb-2"
               >
                 Direct Lines
               </h3>
@@ -186,13 +172,12 @@ export default function Contact() {
                   Media
                 </p>
                 <h4
-                  className="text-white text-2xl leading-tight"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                  className="text-white font-heading text-2xl tracking-wide leading-tight"
                 >
                   Digital Press Kit
                 </h4>
                 <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-                  Download Daniel-raj&apos;s full press kit including stats,
+                  Download Daniel&apos;s full press kit including stats,
                   bio, high-res images, and accolades summary.
                 </p>
               </div>
@@ -210,7 +195,7 @@ export default function Contact() {
             {/* Quick facts */}
             <div className="p-5 bg-obsidian border border-slate-border">
               <p
-                className="text-white text-sm font-semibold tracking-widest uppercase mb-4"
+                className="text-white font-heading text-sm tracking-[0.2em] uppercase mb-4"
               >
                 At a Glance
               </p>
@@ -248,8 +233,7 @@ export default function Contact() {
                 <CheckCircle size={56} className="text-gold-400" />
                 <div>
                   <h3
-                    className="text-white text-3xl mb-3"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                    className="text-white font-heading text-3xl tracking-wide mb-3"
                   >
                     Message Received
                   </h3>
@@ -368,7 +352,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-obsidian font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-obsidian font-heading text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>

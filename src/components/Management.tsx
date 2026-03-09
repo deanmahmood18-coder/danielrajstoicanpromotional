@@ -9,7 +9,7 @@ const credentialPoints = [
   {
     icon: Shield,
     title: "Managed by Sunny Edwards",
-    body: "World champion at flyweight, IBF title holder — as a Sunny Edwards management athlete, Daniel-raj has world-class guidance and a deep network across the global professional boxing landscape.",
+    body: "World champion at flyweight, IBF title holder — as a Sunny Edwards management athlete, Daniel has world-class guidance and a deep network across the global professional boxing landscape.",
   },
   {
     icon: TrendingUp,
@@ -24,7 +24,7 @@ const credentialPoints = [
   {
     icon: Star,
     title: "The Right Moment",
-    body: "The story, the skills, the credentials, and the management are all in place. Daniel-raj is entering the professional ranks at exactly the right time.",
+    body: "The story, the skills, the credentials, and the management are all in place. Daniel is entering the professional ranks at exactly the right time.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Management() {
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
                 src="/media/IMG_7038.jpg"
-                alt="Daniel-raj Stoican, Nottingham professional boxer preparing for his professional boxing career under Sunny Edwards management"
+                alt="Daniel Stoican, Nottingham professional boxer preparing for his professional boxing career under Sunny Edwards management"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -94,8 +94,7 @@ export default function Management() {
                     Represented By
                   </p>
                   <p
-                    className="text-white text-lg leading-tight mb-1"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                    className="text-white font-heading text-lg leading-tight mb-1"
                   >
                     Sunny Edwards
                   </p>
@@ -110,7 +109,7 @@ export default function Management() {
             <div className="absolute -top-3 left-0 md:-top-5 md:-left-6 w-20 h-28 md:w-32 md:h-44 overflow-hidden border border-slate-dark">
               <Image
                 src="/media/IMG_4107.jpg"
-                alt="Daniel-raj Stoican training at the gym in Nottingham — East Midlands boxing champion in preparation"
+                alt="Daniel Stoican training at the gym in Nottingham — East Midlands boxing champion in preparation"
                 fill
                 className="object-cover object-center"
                 sizes="150px"
@@ -128,7 +127,7 @@ export default function Management() {
                 className="flex items-center gap-4 mb-5"
               >
                 <div className="section-divider" />
-                <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
+                <span className="text-gold-500/70 font-heading text-sm tracking-[0.25em] uppercase">
                   Professional Era
                 </span>
               </motion.div>
@@ -137,12 +136,7 @@ export default function Management() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={titleInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontWeight: 600,
-                  fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-                }}
-                className="text-white leading-[0.95] mb-7"
+                className="text-white font-heading text-[clamp(2.5rem,5vw,4.5rem)] tracking-[0.04em] uppercase leading-none mb-7"
               >
                 The Next{" "}
                 <span className="text-gold-gradient">Chapter</span>
@@ -155,7 +149,7 @@ export default function Management() {
                 className="text-gray-400 text-base leading-[1.8] font-light"
               >
                 The amateur journey is complete. The résumé is built. The management
-                is in place. Daniel-raj Stoican — Nottingham&apos;s European Champion and
+                is in place. Daniel Stoican — Nottingham&apos;s European Champion and
                 the East Midlands&apos; finest boxing prospect — is ready for his professional boxing career.
               </motion.p>
             </div>
@@ -178,8 +172,7 @@ export default function Management() {
                     </div>
                     <div>
                       <h4
-                        className="text-white text-sm font-medium tracking-wide mb-1"
-                        style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
+                        className="text-white font-heading text-sm tracking-wide uppercase mb-1"
                       >
                         {point.title}
                       </h4>
@@ -206,7 +199,7 @@ export default function Management() {
                   e.preventDefault();
                   document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-obsidian font-medium text-xs tracking-[0.2em] uppercase hover:bg-gold-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.3)]"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-obsidian font-heading text-sm tracking-[0.15em] uppercase hover:bg-gold-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.3)]"
               >
                 Get in Touch
                 <span className="text-base">&rarr;</span>

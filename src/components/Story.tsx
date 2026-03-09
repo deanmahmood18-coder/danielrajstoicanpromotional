@@ -16,9 +16,9 @@ const chapters = [
     year: "2004",
     location: "Bucharest, Romania",
     title: "Born Into Struggle",
-    body: "Daniel-raj entered the world in Bucharest — a city where marble palaces sit beside crumbling estates. From his earliest years, he knew hardship as a daily reality: nights on the street, weeks without certainty, the weight of poverty pressing down on a child who had done nothing to deserve it.",
+    body: "Daniel entered the world in Bucharest — a city where marble palaces sit beside crumbling estates. From his earliest years, he knew hardship as a daily reality: nights on the street, weeks without certainty, the weight of poverty pressing down on a child who had done nothing to deserve it.",
     image: "/media/childinromania.JPG",
-    imageAlt: "Young Daniel-raj Stoican as a child growing up in Bucharest, Romania before moving to Nottingham, England",
+    imageAlt: "Young Daniel Stoican as a child growing up in Bucharest, Romania before moving to Nottingham, England",
     imagePosition: "center 20%",
     pull: "A boy born into nothing. Destined for everything.",
   },
@@ -28,7 +28,7 @@ const chapters = [
     title: "A New Country. The Same Fight.",
     body: "His family saved everything for a single dream: England. Landing in Sneinton, one of Nottingham's most deprived districts, the streets were different but the struggle felt familiar. No connections. No safety net. Just an unshakeable belief that this country — and the East Midlands boxing scene — would give him the platform his talent deserved.",
     image: "/media/newcountry.jpg",
-    imageAlt: "Daniel-raj Stoican arriving in Nottingham, England — the Romanian-British boxer who would become the city's first European Champion",
+    imageAlt: "Daniel Stoican arriving in Nottingham, England — the Romanian-British boxer who would become the city's first European Champion",
     imagePosition: "center 35%",
     pull: "Different country. Same hunger. Same fire.",
   },
@@ -38,7 +38,7 @@ const chapters = [
     title: "The Day He Found the Ring",
     body: "At 14, the bullying was relentless — the accent, the name, the outsider. He walked into Sneinton ABC boxing gym in Nottingham and found what he'd been searching for his entire life: structure, purpose, and a way to channel every ounce of pain into something powerful. The ring taught him how to survive.",
     image: "/media/firststartedboxing.JPG",
-    imageAlt: "Daniel-raj Stoican training at the boxing gym in Nottingham where he first discovered the sport at age 14",
+    imageAlt: "Daniel Stoican training at the boxing gym in Nottingham where he first discovered the sport at age 14",
     imagePosition: "center 25%",
     pull: "Pain became power. The ring became home.",
   },
@@ -48,7 +48,7 @@ const chapters = [
     title: "The Fighting Begins.",
     body: "At 17, he stepped between the ropes for the first time competitively. What followed was a meteoric rise — 42 wins from 50 bouts, an England debut finished with a first-round knockout, and a trajectory that marked him as the most exciting boxing prospect the East Midlands had produced in a generation.",
     image: "/media/firstfight.jpg",
-    imageAlt: "Daniel-raj Stoican competing in his first amateur boxing bout at age 17 — the start of a 42-win career",
+    imageAlt: "Daniel Stoican competing in his first amateur boxing bout at age 17 — the start of a 42-win career",
     imagePosition: "center 35%",
     pull: "42 wins. One statement. Unstoppable.",
   },
@@ -58,7 +58,7 @@ const chapters = [
     title: "History Forged.",
     body: "He became the first-ever European Champion from Nottinghamshire — the East Midlands boxing champion who conquered the continent. Named Elite Boxer of the Tournament out of 757 boxers in Sweden. A statement to every immigrant, every outsider, every kid from a broken neighbourhood: it is possible.",
     image: "/media/IMG_6687.JPG",
-    imageAlt: "Daniel-raj Stoican celebrating his European Championship victory — the first European Boxing Champion from Nottinghamshire",
+    imageAlt: "Daniel Stoican celebrating his European Championship victory — the first European Boxing Champion from Nottinghamshire",
     imagePosition: "center 20%",
     pull: "The first ever. From Nottinghamshire to the top of Europe.",
   },
@@ -68,7 +68,7 @@ const chapters = [
     title: "The Opportunity Is Now.",
     body: "European Champion. ABA National Champion. Elite Boxer of the Tournament. The amateur chapter is complete — every box ticked, every record set. Now, managed by Sunny Edwards and ready for the professional boxing career ahead, the Nottingham professional boxer from Bucharest is prepared to chase a world title.",
     image: "/media/IMG_4460.jpg",
-    imageAlt: "Daniel-raj Stoican preparing for his professional boxing career — Nottingham's European Champion turning pro under Sunny Edwards management",
+    imageAlt: "Daniel Stoican preparing for his professional boxing career — Nottingham's European Champion turning pro under Sunny Edwards management",
     imagePosition: "center 30%",
     pull: "The amateur story ends. The professional era begins.",
   },
@@ -236,8 +236,7 @@ function CinematicChapter({
           {/* Year watermark */}
           <div className="absolute top-4 right-5 pointer-events-none select-none">
             <span
-              className="text-white/[0.06] text-7xl leading-none block"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
+              className="text-white/[0.06] text-7xl leading-none block font-display font-bold"
             >
               {chapter.year}
             </span>
@@ -246,12 +245,11 @@ function CinematicChapter({
           {/* Chapter number */}
           <div className="absolute top-4 left-5 z-10">
             <div className="flex items-center gap-2">
-              <span className="text-gold-500/40 text-[9px] tracking-[0.4em] uppercase font-body">
+              <span className="text-gold-500/40 text-[9px] tracking-[0.4em] uppercase font-heading">
                 Chapter
               </span>
               <span
-                className="text-gold-500/60 text-base"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                className="text-gold-500/60 text-base font-display"
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -264,22 +262,19 @@ function CinematicChapter({
           {/* Year + location */}
           <div className="flex items-center gap-3 mb-4">
             <span
-              className="text-gold-400 text-lg"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
+              className="text-gold-400 text-lg font-display font-bold"
             >
               {chapter.year}
             </span>
             <div className="w-6 h-px bg-gold-500/40" />
-            <span className="text-gold-500/60 text-[9px] tracking-[0.35em] uppercase font-body">
+            <span className="text-gold-500/60 text-[9px] tracking-[0.35em] uppercase font-heading">
               {chapter.location}
             </span>
           </div>
 
           <h3
-            className="text-white leading-[1.05] mb-4"
+            className="text-white leading-[1.05] mb-4 font-display"
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
               fontSize: "1.75rem",
             }}
           >
@@ -345,10 +340,8 @@ function CinematicChapter({
           className="absolute top-1/2 -translate-y-1/2 right-16 pointer-events-none select-none"
         >
           <span
-            className="text-white leading-none block"
+            className="text-white leading-none block font-display font-bold"
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 700,
               fontSize: "clamp(8rem, 20vw, 18rem)",
             }}
           >
@@ -362,12 +355,11 @@ function CinematicChapter({
           className="absolute top-24 left-12 z-10"
         >
           <div className="flex items-center gap-3">
-            <span className="text-gold-500/40 text-[10px] tracking-[0.5em] uppercase font-body">
+            <span className="text-gold-500/40 text-[10px] tracking-[0.5em] uppercase font-heading">
               Chapter
             </span>
             <span
-              className="text-gold-500/60 text-xl"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+              className="text-gold-500/60 text-xl font-display"
             >
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -384,13 +376,12 @@ function CinematicChapter({
                 className="flex items-center gap-3 mb-5"
               >
                 <span
-                  className="text-gold-400 text-xl"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
+                  className="text-gold-400 text-xl font-display font-bold"
                 >
                   {chapter.year}
                 </span>
                 <div className="w-8 h-px bg-gold-500/40" />
-                <span className="text-gold-500/60 text-[9px] tracking-[0.4em] uppercase font-body">
+                <span className="text-gold-500/60 text-[9px] tracking-[0.4em] uppercase font-heading">
                   {chapter.location}
                 </span>
               </motion.div>
@@ -405,10 +396,8 @@ function CinematicChapter({
                 }}
               >
                 <h3
-                  className="text-white leading-[1] mb-5"
+                  className="text-white leading-[1] mb-5 font-display"
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontWeight: 600,
                     fontSize: "clamp(2rem, 5vw, 3.5rem)",
                   }}
                 >
@@ -486,7 +475,7 @@ export default function Story() {
               className="flex items-center justify-center gap-4 mb-5"
             >
               <div className="w-8 h-px bg-gold-500/40" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+              <span className="text-gold-500/70 text-sm tracking-[0.25em] uppercase font-medium font-heading">
                 Origin
               </span>
               <div className="w-8 h-px bg-gold-500/40" />
@@ -496,10 +485,8 @@ export default function Story() {
               initial={{ opacity: 0, y: 25 }}
               animate={titleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-white leading-[0.95] mb-6"
+              className="text-white leading-[0.95] mb-6 font-display"
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
                 fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
               }}
             >
@@ -560,16 +547,14 @@ export default function Story() {
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-4 mb-5">
               <div className="w-8 h-px bg-gold-500/40" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+              <span className="text-gold-500/70 text-sm tracking-[0.25em] uppercase font-medium font-heading">
                 In His Own Words
               </span>
               <div className="w-8 h-px bg-gold-500/40" />
             </div>
             <h3
-              className="text-white leading-[1.05] mb-4"
+              className="text-white leading-[1.05] mb-4 font-display"
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               }}
             >
@@ -577,7 +562,7 @@ export default function Story() {
               <span className="text-gold-gradient">the Fighter</span>
             </h3>
             <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed font-light">
-              No script. No filter. Daniel-raj on the upbringing that forged him.
+              No script. No filter. Daniel on the upbringing that forged him.
             </p>
           </div>
 
@@ -593,7 +578,7 @@ export default function Story() {
             <div className="relative w-full aspect-video">
               <iframe
                 src="https://www.youtube.com/embed/2ZrYQ_luZ-4?rel=0&modestbranding=1&color=white"
-                title="Daniel-raj Stoican — In His Own Words"
+                title="Daniel Stoican — In His Own Words"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 frameBorder={0}
@@ -618,14 +603,13 @@ export default function Story() {
         >
           <div className="w-8 h-px bg-gold-500/30 mx-auto mb-8" />
           <blockquote
-            className="text-white text-xl md:text-2xl lg:text-3xl leading-[1.5] italic mb-5"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 400 }}
+            className="text-white text-xl md:text-2xl lg:text-3xl leading-[1.5] mb-5 font-display font-normal italic"
           >
             &ldquo;I didn&apos;t choose boxing. Boxing chose me when I needed
             it most — and now I owe it everything.&rdquo;
           </blockquote>
-          <p className="text-gold-500/50 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
-            Daniel-raj Stoican
+          <p className="text-gold-500/50 text-[10px] tracking-[0.45em] uppercase font-medium font-heading">
+            Daniel Stoican
           </p>
         </motion.div>
       </div>

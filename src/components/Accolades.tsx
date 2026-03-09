@@ -38,7 +38,7 @@ const trophies = [
     title: "European Champion",
     subtitle: "First Ever from Nottinghamshire",
     description:
-      "No fighter from Nottinghamshire had ever won a European amateur title. Daniel-raj wrote that history alone — a landmark achievement for an entire city and region.",
+      "No fighter from Nottinghamshire had ever won a European amateur title. Daniel wrote that history alone — a landmark achievement for an entire city and region.",
     tier: "gold",
     featured: true,
   },
@@ -80,7 +80,7 @@ const trophies = [
     title: "Romanian National Champion",
     subtitle: "Representing His Roots",
     description:
-      "Born in Bucharest, Daniel-raj returned to compete for Romania and claimed the national title — honouring his heritage on the biggest stage.",
+      "Born in Bucharest, Daniel returned to compete for Romania and claimed the national title — honouring his heritage on the biggest stage.",
     tier: "gold",
   },
   {
@@ -189,10 +189,9 @@ function TrophyCard({
 
       <div>
         <h3
-          className={`text-xl md:text-2xl leading-tight mb-1 ${
+          className={`font-heading text-xl md:text-2xl leading-tight mb-1 tracking-wide ${
             trophy.tier === "gold" ? "text-gold-400" : "text-white"
           }`}
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
         >
           {trophy.title}
         </h3>
@@ -274,7 +273,7 @@ export default function Accolades() {
               className="flex items-center gap-4 mb-5 relative z-10"
             >
               <div className="section-divider" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
+              <span className="font-heading text-gold-500/80 text-sm tracking-[0.25em] uppercase">
                 Accolades
               </span>
             </motion.div>
@@ -283,12 +282,7 @@ export default function Accolades() {
               initial={{ opacity: 0, y: 30 }}
               animate={titleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
-              }}
-              className="text-white leading-[0.95] relative z-10"
+              className="font-heading text-white leading-none relative z-10 text-[clamp(3rem,8vw,6rem)] tracking-[0.04em] uppercase"
             >
               The Record
             </motion.h2>
@@ -310,7 +304,7 @@ export default function Accolades() {
                 >
                   <Image
                     src="/media/european_champ.JPG"
-                    alt="Daniel-raj Stoican celebrating his European Championship victory in Sweden — the first European Boxing Champion from Nottinghamshire"
+                    alt="Daniel Stoican celebrating his European Championship victory in Sweden — the first European Boxing Champion from Nottinghamshire"
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -322,48 +316,36 @@ export default function Accolades() {
 
               {/* Text */}
               <div>
-                <p className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium mb-4 font-body">
+                <p className="font-heading text-gold-500/80 text-sm tracking-[0.25em] uppercase mb-4">
                   The Crowning Achievement
                 </p>
-                <h3
-                  className="text-white text-4xl md:text-5xl lg:text-6xl leading-[1] mb-6"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
-                >
+                <h3 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-[1] mb-6">
                   First European Champion
                   <br />
                   <span className="text-gold-gradient">from Nottinghamshire.</span>
                 </h3>
                 <p className="text-gray-400 text-base leading-[1.8] font-light mb-8 max-w-lg">
                   No fighter from the county had ever achieved this. In a tournament
-                  featuring 757 of Europe&apos;s finest amateur boxers, Daniel-raj
+                  featuring 757 of Europe&apos;s finest amateur boxers, Daniel
                   was named Elite Boxer of the Tournament — at just 21 years old.
                 </p>
                 <div className="flex items-center gap-6">
                   <div className="text-center">
-                    <p
-                      className="text-gold-400 text-3xl md:text-4xl"
-                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                    >
+                    <p className="font-heading text-gold-400 text-4xl md:text-5xl tracking-wider">
                       42–8
                     </p>
                     <p className="text-gray-500 text-[10px] tracking-[0.3em] uppercase mt-1 font-body">Record</p>
                   </div>
                   <div className="w-px h-12 bg-slate-border" />
                   <div className="text-center">
-                    <p
-                      className="text-gold-400 text-3xl md:text-4xl"
-                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                    >
+                    <p className="font-heading text-gold-400 text-4xl md:text-5xl tracking-wider">
                       21
                     </p>
                     <p className="text-gray-500 text-[10px] tracking-[0.3em] uppercase mt-1 font-body">Years Old</p>
                   </div>
                   <div className="w-px h-12 bg-slate-border" />
                   <div className="text-center">
-                    <p
-                      className="text-gold-400 text-3xl md:text-4xl"
-                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                    >
+                    <p className="font-heading text-gold-400 text-4xl md:text-5xl tracking-wider">
                       1st
                     </p>
                     <p className="text-gray-500 text-[10px] tracking-[0.3em] uppercase mt-1 font-body">Ever</p>
@@ -387,10 +369,7 @@ export default function Accolades() {
                 viewport={{ once: true }}
                 className="bg-slate-dark p-6 md:p-8 text-center group hover:bg-obsidian transition-colors duration-300"
               >
-                <div
-                  className="text-3xl md:text-4xl text-gold-400 mb-2 leading-none"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                >
+                <div className="font-heading text-4xl md:text-5xl text-gold-400 mb-2 leading-none stat-glow">
                   <ScrollDrivenCounter
                     value={stat.value}
                     suffix={stat.suffix}
@@ -422,19 +401,12 @@ export default function Accolades() {
           >
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="w-8 h-px bg-gold-500/40" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
+              <span className="font-heading text-gold-500/80 text-sm tracking-[0.25em] uppercase">
                 Featured Fight
               </span>
               <div className="w-8 h-px bg-gold-500/40" />
             </div>
-            <h3
-              className="text-white text-center mb-3"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
-              }}
-            >
+            <h3 className="font-display text-white text-center mb-3 text-[clamp(1.6rem,3vw,2.4rem)]">
               ABA National Championship{" "}
               <span className="text-gold-gradient">Victory</span>
             </h3>
@@ -446,7 +418,7 @@ export default function Accolades() {
               <div className="relative aspect-video bg-slate-dark border border-slate-border overflow-hidden">
                 <iframe
                   src="https://www.youtube.com/embed/ZCu83qrg218"
-                  title="Daniel-Raj Stoican — ABA National Championship"
+                  title="Daniel Stoican — ABA National Championship"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full"
@@ -470,9 +442,9 @@ export default function Accolades() {
             className="mt-20 grid grid-cols-3 gap-2 md:gap-3"
           >
             {[
-              { src: "/media/IMG_6686.JPG", position: "center 20%", alt: "Daniel-raj Stoican competing in elite amateur boxing — Nottingham's European Champion in action" },
-              { src: "/media/IMG_5231.JPG", position: "center 30%", alt: "Daniel-raj Stoican victorious after winning a championship bout — East Midlands boxing champion" },
-              { src: "/media/IMG_8010.jpg", position: "center 35%", alt: "Daniel-raj Stoican ringside during competition — ABA National Champion from Nottinghamshire" },
+              { src: "/media/IMG_6686.JPG", position: "center 20%", alt: "Daniel Stoican competing in elite amateur boxing — Nottingham's European Champion in action" },
+              { src: "/media/IMG_5231.JPG", position: "center 30%", alt: "Daniel Stoican victorious after winning a championship bout — East Midlands boxing champion" },
+              { src: "/media/IMG_8010.jpg", position: "center 35%", alt: "Daniel Stoican ringside during competition — ABA National Champion from Nottinghamshire" },
             ].map(
               (img, i) => (
                 <motion.div

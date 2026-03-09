@@ -55,7 +55,7 @@ export async function GET() {
             <td style="padding: 0 24px 32px 24px;">
               <img
                 src="${siteUrl}/media/european_champ.JPG"
-                alt="Daniel-raj Stoican — European Champion"
+                alt="Daniel Stoican — European Champion"
                 width="552"
                 style="width: 100%; max-width: 552px; height: auto; display: block; border: 1px solid rgba(201,168,76,0.1);"
               />
@@ -131,7 +131,7 @@ export async function GET() {
             <td style="padding: 0 24px 32px 24px;">
               <img
                 src="${siteUrl}/media/IMG_7038.jpg"
-                alt="Daniel-raj Stoican — Training"
+                alt="Daniel Stoican — Training"
                 width="552"
                 style="width: 100%; max-width: 552px; height: auto; display: block; border: 1px solid rgba(201,168,76,0.1);"
               />
@@ -146,13 +146,13 @@ export async function GET() {
                 </h2>
                 <p style="color: #9ca3af; font-size: 14px; line-height: 1.8; margin: 0;">
                   As a member of the Inner Circle, you&rsquo;ll be the first to know about every milestone
-                  on Daniel-raj&rsquo;s journey to the professional stage and beyond.
+                  on Daniel&rsquo;s journey to the professional stage and beyond.
                 </p>
               </div>
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                 <tr><td style="padding: 12px 16px; border-bottom: 1px solid #22262E;"><table cellpadding="0" cellspacing="0"><tr><td style="color: #C9A84C; font-size: 14px; padding-right: 12px;">&#9733;</td><td style="color: #d1d5db; font-size: 13px; line-height: 1.6;"><strong style="color: #fff;">Fight announcements</strong> and ticket pre-sale access before the general public</td></tr></table></td></tr>
                 <tr><td style="padding: 12px 16px; border-bottom: 1px solid #22262E;"><table cellpadding="0" cellspacing="0"><tr><td style="color: #C9A84C; font-size: 14px; padding-right: 12px;">&#9733;</td><td style="color: #d1d5db; font-size: 13px; line-height: 1.6;"><strong style="color: #fff;">Training camp updates</strong> — behind-the-scenes footage, sparring reports, and preparation insights</td></tr></table></td></tr>
-                <tr><td style="padding: 12px 16px; border-bottom: 1px solid #22262E;"><table cellpadding="0" cellspacing="0"><tr><td style="color: #C9A84C; font-size: 14px; padding-right: 12px;">&#9733;</td><td style="color: #d1d5db; font-size: 13px; line-height: 1.6;"><strong style="color: #fff;">Personal messages</strong> directly from Daniel-raj — his thoughts, his mindset, his goals</td></tr></table></td></tr>
+                <tr><td style="padding: 12px 16px; border-bottom: 1px solid #22262E;"><table cellpadding="0" cellspacing="0"><tr><td style="color: #C9A84C; font-size: 14px; padding-right: 12px;">&#9733;</td><td style="color: #d1d5db; font-size: 13px; line-height: 1.6;"><strong style="color: #fff;">Personal messages</strong> directly from Daniel — his thoughts, his mindset, his goals</td></tr></table></td></tr>
                 <tr><td style="padding: 12px 16px;"><table cellpadding="0" cellspacing="0"><tr><td style="color: #C9A84C; font-size: 14px; padding-right: 12px;">&#9733;</td><td style="color: #d1d5db; font-size: 13px; line-height: 1.6;"><strong style="color: #fff;">Career milestones</strong> as they happen — pro debut, rankings, title shots, and everything in between</td></tr></table></td></tr>
               </table>
             </td>
@@ -161,7 +161,7 @@ export async function GET() {
           <tr>
             <td style="padding: 0 40px 40px 40px; text-align: center;">
               <p style="color: #9ca3af; font-size: 14px; line-height: 1.7; margin: 0 0 20px 0;">
-                Follow Daniel-raj on social media to stay connected between newsletters.
+                Follow Daniel on social media to stay connected between newsletters.
               </p>
               <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                 <tr>

@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Daniel-raj Stoican | Professional Boxer | European Champion | Managed by Sunny Edwards",
-    template: "%s | Daniel-raj Stoican",
+      "Daniel Stoican | Professional Boxer | European Champion | Managed by Sunny Edwards",
+    template: "%s | Daniel Stoican",
   },
   description:
-    "Official site of Daniel-raj Stoican — European Champion, ABA National Champion, Elite Boxer of the Tournament. Amateur record 42-8 from 50 bouts. The first European Boxing Champion from Nottinghamshire. Now turning professional, managed by former IBF World Champion Sunny Edwards.",
+    "Official site of Daniel Stoican — European Champion, ABA National Champion, Elite Boxer of the Tournament. Amateur record 42-8 from 50 bouts. The first European Boxing Champion from Nottinghamshire. Now turning professional, managed by former IBF World Champion Sunny Edwards.",
   keywords: [
-    "Daniel-raj Stoican",
+    "Daniel Stoican",
     "Daniel Raj Stoican",
     "Daniel Stoican boxer",
     "Nottingham boxer",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "boxing prospect UK",
     "Elite Boxer of the Tournament",
   ],
-  authors: [{ name: "Daniel-raj Stoican" }],
+  authors: [{ name: "Daniel Stoican" }],
   creator: "DM Developers",
-  publisher: "Daniel-raj Stoican",
+  publisher: "Daniel Stoican",
   formatDetection: {
     telephone: true,
     email: true,
@@ -47,11 +47,11 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "Daniel-raj Stoican | European Champion | Professional Boxer",
+    title: "Daniel Stoican | European Champion | Professional Boxer",
     description:
       "From the streets of Bucharest to European Champion. Amateur record 42-8. The first European Boxing Champion from Nottinghamshire. Now turning professional — managed by Sunny Edwards.",
     url: siteUrl,
-    siteName: "Daniel-raj Stoican",
+    siteName: "Daniel Stoican",
     locale: "en_GB",
     type: "website",
     images: [
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
         url: "/media/landing_photo.JPG",
         width: 1200,
         height: 630,
-        alt: "Daniel-raj Stoican — European Champion & Professional Boxer from Nottingham",
+        alt: "Daniel Stoican — European Champion & Professional Boxer from Nottingham",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel-raj Stoican | European Champion | Professional Boxer",
+    title: "Daniel Stoican | European Champion | Professional Boxer",
     description:
       "From the streets of Bucharest to European Champion. The first from Nottinghamshire. Now turning professional.",
     images: ["/media/landing_photo.JPG"],
@@ -116,7 +116,7 @@ export default function RootLayout({
                 {
                   "@type": "Person",
                   "@id": `${siteUrl}/#person`,
-                  name: "Daniel-raj Stoican",
+                  name: "Daniel Stoican",
                   alternateName: ["Daniel Raj Stoican", "Daniel Stoican"],
                   description:
                     "European Boxing Champion and ABA National Champion from Nottingham, England. Amateur record 42-8. The first European Champion from Nottinghamshire.",
@@ -179,9 +179,9 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": `${siteUrl}/#website`,
                   url: siteUrl,
-                  name: "Daniel-raj Stoican — Professional Boxer",
+                  name: "Daniel Stoican — Professional Boxer",
                   description:
-                    "Official website of Daniel-raj Stoican, European Boxing Champion from Nottingham.",
+                    "Official website of Daniel Stoican, European Boxing Champion from Nottingham.",
                   publisher: { "@id": `${siteUrl}/#person` },
                   inLanguage: "en-GB",
                 },
@@ -189,11 +189,11 @@ export default function RootLayout({
                   "@type": "WebPage",
                   "@id": `${siteUrl}/#webpage`,
                   url: siteUrl,
-                  name: "Daniel-raj Stoican | Professional Boxer | European Champion",
+                  name: "Daniel Stoican | Professional Boxer | European Champion",
                   isPartOf: { "@id": `${siteUrl}/#website` },
                   about: { "@id": `${siteUrl}/#person` },
                   description:
-                    "Official portfolio of Daniel-raj Stoican — European Champion, ABA National Champion, amateur record 42-8. Managed by Sunny Edwards.",
+                    "Official portfolio of Daniel Stoican — European Champion, ABA National Champion, amateur record 42-8. Managed by Sunny Edwards.",
                   inLanguage: "en-GB",
                 },
               ],

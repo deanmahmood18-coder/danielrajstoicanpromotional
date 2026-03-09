@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/daniel_rajstoican?igsh=MWZ4bDZhNHk1d2YwOA%3D%3D&utm_source=qr" },
@@ -18,19 +19,17 @@ export default function Footer() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 border border-gold-500/40 flex items-center justify-center">
-                  <span
-                    className="text-gold-500/80 text-[8px] leading-none tracking-wider"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
-                  >
-                    DSR
-                  </span>
-                </div>
+                <Image
+                  src="/media/logo.png"
+                  alt="Daniel Stoican logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
                 <span
-                  className="text-white text-sm tracking-[0.12em]"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500 }}
+                  className="text-white text-sm tracking-[0.12em] font-display font-medium"
                 >
-                  Daniel-Raj Stoican
+                  Daniel Stoican
                 </span>
               </div>
               <p className="text-gray-600 text-xs leading-relaxed font-light max-w-xs">
@@ -41,7 +40,7 @@ export default function Footer() {
 
             {/* Quick links */}
             <div>
-              <p className="text-gray-500 text-[10px] tracking-[0.35em] uppercase font-body mb-4">
+              <p className="text-gray-500 font-heading text-xs tracking-[0.25em] uppercase mb-4">
                 Navigate
               </p>
               <div className="grid grid-cols-2 gap-2">
@@ -63,8 +62,8 @@ export default function Footer() {
 
             {/* Social links */}
             <div>
-              <p className="text-gray-500 text-[10px] tracking-[0.35em] uppercase font-body mb-4">
-                Follow Daniel-raj
+              <p className="text-gray-500 font-heading text-xs tracking-[0.25em] uppercase mb-4">
+                Follow Daniel
               </p>
               <div className="flex flex-col gap-2">
                 {socialLinks.map((link) => (

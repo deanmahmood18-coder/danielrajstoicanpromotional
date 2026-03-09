@@ -10,17 +10,26 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
+          200: "#F7E8B0",
           300: "#F0E0B0",
           400: "#E2C878",
           500: "#C9A84C",
           600: "#A68B3A",
           700: "#86702E",
+          900: "#3D2E10",
+        },
+        electric: {
+          400: "#9ECBFF",
+          500: "#5BA3E6",
+          600: "#3A7CC0",
         },
         ivory: "#F5F0E8",
-        obsidian: "#080808",
-        "slate-dark": "#0E1014",
-        "slate-mid": "#161A20",
-        "slate-border": "#22262E",
+        obsidian: "#050507",
+        "slate-dark": "#0A0C10",
+        "slate-mid": "#12151C",
+        "slate-border": "#1E2230",
+        "slate-border-bright": "#2A3040",
+        "live-red": "#E53E3E",
       },
       fontFamily: {
         display: ["'Cormorant Garamond'", "Georgia", "serif"],

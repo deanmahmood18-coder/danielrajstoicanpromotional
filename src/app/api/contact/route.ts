@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
 
     // Send notification email to the team
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Daniel-raj Stoican <newsletter@danielrajstoican.com>",
+      from: process.env.RESEND_FROM_EMAIL || "Daniel Stoican <newsletter@danielrajstoican.com>",
       to: "ukhaliq7@hotmail.com",
       subject: `New Inquiry — ${role || "General"} — ${name}`,
       html: `

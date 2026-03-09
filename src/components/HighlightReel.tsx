@@ -60,25 +60,18 @@ export default function HighlightReel() {
         >
           <div className="flex items-center justify-center gap-4 mb-5">
             <div className="w-8 h-px bg-gold-500/40" />
-            <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+            <span className="font-heading text-gold-500/80 text-sm tracking-[0.25em] uppercase">
               Behind the Scenes
             </span>
             <div className="w-8 h-px bg-gold-500/40" />
           </div>
-          <h2
-            className="text-white mb-5"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: "clamp(2.2rem, 5vw, 4rem)",
-            }}
-          >
+          <h2 className="font-heading text-white mb-5 text-[clamp(2.5rem,6vw,5rem)] tracking-[0.04em] uppercase leading-none">
             The Work{" "}
             <span className="text-gold-gradient">Behind the Glory</span>
           </h2>
           <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed font-light">
             Champions aren&apos;t made on fight night — they&apos;re built in the gym, through
-            discipline, sacrifice, and relentless work. This is Daniel-raj in his element.
+            discipline, sacrifice, and relentless work. This is Daniel in his element.
           </p>
         </motion.div>
 
@@ -174,21 +167,20 @@ export default function HighlightReel() {
             className="mt-10 text-center"
           >
             <p
-              className="text-white/60 text-lg md:text-xl italic max-w-2xl mx-auto leading-relaxed"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              className="font-display text-white/60 text-lg md:text-xl italic max-w-2xl mx-auto leading-relaxed"
             >
               &ldquo;Every round in the gym is a round closer to the world title.
               There are no shortcuts — only the work.&rdquo;
             </p>
             <p className="text-gold-500/50 text-[10px] tracking-[0.4em] uppercase font-body mt-4">
-              Daniel-raj Stoican
+              Daniel Stoican
             </p>
           </motion.div>
 
           {/* Bottom accent line */}
           <div className="mt-8 flex items-center justify-center gap-4">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-border to-transparent" />
-            <p className="text-gray-600 text-[9px] tracking-[0.4em] uppercase font-body flex-shrink-0">
+            <p className="font-heading text-gray-600 text-xs tracking-[0.3em] uppercase flex-shrink-0">
               Discipline &middot; Sacrifice &middot; Hunger
             </p>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-border to-transparent" />

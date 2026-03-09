@@ -13,7 +13,7 @@ const perks = [
   {
     icon: Users,
     title: "Inner Circle Access",
-    description: "Behind-the-scenes content, exclusive photos, and personal messages from Daniel-raj.",
+    description: "Behind-the-scenes content, exclusive photos, and personal messages from Daniel.",
   },
   {
     icon: Zap,
@@ -77,26 +77,21 @@ export default function Newsletter() {
         >
           <div className="flex items-center justify-center gap-4 mb-5">
             <div className="w-8 h-px bg-gold-500/40" />
-            <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+            <span className="text-gold-500/70 font-heading text-sm tracking-[0.25em] uppercase">
               Stay Connected
             </span>
             <div className="w-8 h-px bg-gold-500/40" />
           </div>
 
           <h2
-            className="text-white leading-[0.95] mb-5"
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontWeight: 600,
-              fontSize: "clamp(2.2rem, 5vw, 4rem)",
-            }}
+            className="text-white font-heading text-[clamp(2.5rem,6vw,4.5rem)] tracking-[0.04em] uppercase leading-none mb-5"
           >
             Join the{" "}
             <span className="text-gold-gradient">Inner Circle</span>
           </h2>
 
           <p className="text-gray-400 text-sm md:text-base max-w-lg mx-auto leading-relaxed font-light">
-            A monthly newsletter for those who want to follow Daniel-raj&apos;s
+            A monthly newsletter for those who want to follow Daniel&apos;s
             journey from the inside. Fight updates, personal stories, and exclusive
             content — straight to your inbox.
           </p>
@@ -118,8 +113,7 @@ export default function Newsletter() {
                   <Icon size={16} className="text-gold-400/80" />
                 </div>
                 <h4
-                  className="text-white text-sm font-medium mb-2"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600, fontSize: "1.05rem" }}
+                  className="text-white font-heading text-base tracking-wide mb-2"
                 >
                   {perk.title}
                 </h4>
@@ -146,8 +140,7 @@ export default function Newsletter() {
             >
               <CheckCircle size={40} className="text-gold-400 mx-auto mb-4" />
               <h3
-                className="text-white text-2xl mb-2"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                className="text-white font-heading text-3xl tracking-wide mb-2"
               >
                 You&apos;re In.
               </h3>
@@ -190,7 +183,7 @@ export default function Newsletter() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full group flex items-center justify-center gap-3 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-obsidian font-semibold text-[11px] tracking-[0.25em] uppercase transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.3)] disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full group flex items-center justify-center gap-3 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-obsidian font-heading text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.3)] disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <>

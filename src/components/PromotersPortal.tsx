@@ -9,7 +9,7 @@ const sellingPoints = [
   {
     icon: Target,
     title: "A Story That Sells Itself",
-    body: "Immigration. Poverty. Bullying. Triumph. Daniel-Raj's narrative is the kind of origin story that captivates audiences and builds lasting fanbases. This is a fighter people invest in emotionally.",
+    body: "Immigration. Poverty. Bullying. Triumph. Daniel's narrative is the kind of origin story that captivates audiences and builds lasting fanbases. This is a fighter people invest in emotionally.",
   },
   {
     icon: Globe,
@@ -28,7 +28,7 @@ const sponsorshipFeatures = [
     icon: Megaphone,
     title: "Indirect Social Reach",
     stat: "2M+",
-    body: "Daniel-Raj's network spans 2 million followers across connected social media platforms — a powerful, organic audience ready to engage with your brand.",
+    body: "Daniel's network spans 2 million followers across connected social media platforms — a powerful, organic audience ready to engage with your brand.",
   },
   {
     icon: Users,
@@ -69,7 +69,7 @@ export default function PromotersPortal() {
   return (
     <section className="relative overflow-hidden">
 
-      {/* ─── Why Daniel-Raj section (moved above CTA) ─── */}
+      {/* ─── Why Daniel section (moved above CTA) ─── */}
       <div className="bg-obsidian py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -81,21 +81,16 @@ export default function PromotersPortal() {
           >
             <div className="flex items-center justify-center gap-4 mb-5">
               <div className="w-8 h-px bg-gold-500/40" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.45em] uppercase font-medium font-body">
+              <span className="text-gold-500/70 font-heading text-sm tracking-[0.25em] uppercase">
                 For Promoters
               </span>
               <div className="w-8 h-px bg-gold-500/40" />
             </div>
             <h3
-              className="text-white mb-4"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              }}
+              className="text-white font-heading text-[clamp(2rem,4vw,3.2rem)] tracking-[0.04em] uppercase leading-none mb-4"
             >
               Why{" "}
-              <span className="text-gold-gradient">Daniel-Raj?</span>
+              <span className="text-gold-gradient">Daniel?</span>
             </h3>
             <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed font-light">
               Three reasons this fighter stands apart from every other prospect
@@ -116,7 +111,7 @@ export default function PromotersPortal() {
               <div className="relative overflow-hidden border border-gold-500/15 group">
                 <Image
                   src="/media/whydaniel-raj.JPG"
-                  alt="Daniel-raj Stoican featured in Boxing News magazine — Nottingham professional boxer and European Champion profiled in national press"
+                  alt="Daniel Stoican featured in Boxing News magazine — Nottingham professional boxer and European Champion profiled in national press"
                   width={400}
                   height={560}
                   className="w-full h-auto grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
@@ -146,8 +141,7 @@ export default function PromotersPortal() {
                     </div>
                     <div>
                       <h4
-                        className="text-white text-lg mb-2"
-                        style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                        className="text-white font-heading text-lg tracking-wide mb-2"
                       >
                         {point.title}
                       </h4>
@@ -177,8 +171,7 @@ export default function PromotersPortal() {
                 className="bg-obsidian p-6 md:p-8 text-center"
               >
                 <p
-                  className="text-gold-400 text-2xl md:text-3xl mb-1"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
+                  className="text-gold-400 font-heading text-3xl md:text-4xl tracking-wider mb-1"
                 >
                   {m.stat}
                 </p>
@@ -206,18 +199,13 @@ export default function PromotersPortal() {
           >
             <div className="flex items-center justify-center gap-4 mb-5">
               <div className="w-8 h-px bg-gold-500/40" />
-              <span className="text-gold-500/70 text-[10px] tracking-[0.5em] uppercase font-medium font-body">
+              <span className="text-gold-500/70 font-heading text-sm tracking-[0.25em] uppercase">
                 Partnerships
               </span>
               <div className="w-8 h-px bg-gold-500/40" />
             </div>
             <h3
-              className="text-white mb-5"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              }}
+              className="text-white font-heading text-[clamp(2rem,4vw,3.2rem)] tracking-[0.04em] uppercase leading-none mb-5"
             >
               Sponsorship{" "}
               <span className="text-gold-gradient">Opportunities</span>
@@ -247,15 +235,13 @@ export default function PromotersPortal() {
                       <Icon size={18} className="text-gold-400/80" />
                     </div>
                     <span
-                      className="text-gold-400 text-2xl"
-                      style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 700 }}
+                      className="text-gold-400 font-heading text-2xl tracking-wider"
                     >
                       {feature.stat}
                     </span>
                   </div>
                   <h4
-                    className="text-white text-lg mb-3"
-                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 600 }}
+                    className="text-white font-heading text-lg tracking-wide mb-3"
                   >
                     {feature.title}
                   </h4>
@@ -274,7 +260,7 @@ export default function PromotersPortal() {
             className="text-center"
           >
             <p className="text-gray-400 text-sm mb-6 font-light">
-              Interested in partnering with Daniel-Raj? Get in touch to discuss a package tailored to your business.
+              Interested in partnering with Daniel? Get in touch to discuss a package tailored to your business.
             </p>
             <button
               onClick={() =>
@@ -282,7 +268,7 @@ export default function PromotersPortal() {
                   .querySelector("#contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="group inline-flex items-center gap-3 px-8 py-4 border border-gold-500/40 text-gold-400 text-xs tracking-[0.2em] uppercase hover:bg-gold-500 hover:text-obsidian font-medium transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 border border-gold-500/40 text-gold-400 font-heading text-sm tracking-[0.15em] uppercase hover:bg-gold-500 hover:text-obsidian transition-all duration-300"
             >
               Discuss Sponsorship
               <ArrowRight
@@ -306,7 +292,7 @@ export default function PromotersPortal() {
         >
           <Image
             src="/media/opportunityisnow.JPG"
-            alt="Daniel-Raj Stoican — The Opportunity Is Now"
+            alt="Daniel Stoican — The Opportunity Is Now"
             fill
             className="object-cover object-center"
             sizes="100vw"
@@ -326,12 +312,7 @@ export default function PromotersPortal() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2
-              className="text-white leading-[0.92] mb-6"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontWeight: 600,
-                fontSize: "clamp(3rem, 8vw, 6.5rem)",
-              }}
+              className="text-white font-display leading-[0.92] mb-6 text-[clamp(3rem,8vw,6.5rem)]"
             >
               The Opportunity
               <br />
@@ -351,7 +332,7 @@ export default function PromotersPortal() {
                   .querySelector("#contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="group inline-flex items-center gap-4 px-8 py-4 bg-gold-500 text-obsidian font-medium text-xs tracking-[0.2em] uppercase hover:bg-gold-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
+              className="group inline-flex items-center gap-4 px-8 py-4 bg-gold-500 text-obsidian font-heading text-sm tracking-[0.15em] uppercase hover:bg-gold-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.4)]"
             >
               Start the Conversation
               <ArrowRight
